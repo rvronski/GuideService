@@ -22,6 +22,11 @@
 		84AD3E1B2A9DE01B0043ED08 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E1A2A9DE01B0043ED08 /* NetworkManager.swift */; };
 		84AD3E1D2A9DE0810043ED08 /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E1C2A9DE0810043ED08 /* Coordinatable.swift */; };
 		84AD3E212A9DE1D00043ED08 /* GuideCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E202A9DE1D00043ED08 /* GuideCoordinator.swift */; };
+		84AD3E242A9DE5F50043ED08 /* GuideListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E232A9DE5F50043ED08 /* GuideListCollectionViewCell.swift */; };
+		84AD3E262A9DED6C0043ED08 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E252A9DED6C0043ED08 /* NetworkModel.swift */; };
+		84AD3E292A9DF1160043ED08 /* UIimageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E282A9DF1160043ED08 /* UIimageView+Extension.swift */; };
+		84AD3E2B2A9E04420043ED08 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E2A2A9E04420043ED08 /* Errors.swift */; };
+		84AD3E2E2A9E06AF0043ED08 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E2D2A9E06AF0043ED08 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		84AD3E1A2A9DE01B0043ED08 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		84AD3E1C2A9DE0810043ED08 /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
 		84AD3E202A9DE1D00043ED08 /* GuideCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCoordinator.swift; sourceTree = "<group>"; };
+		84AD3E232A9DE5F50043ED08 /* GuideListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideListCollectionViewCell.swift; sourceTree = "<group>"; };
+		84AD3E252A9DED6C0043ED08 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		84AD3E282A9DF1160043ED08 /* UIimageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIimageView+Extension.swift"; sourceTree = "<group>"; };
+		84AD3E2A2A9E04420043ED08 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		84AD3E2D2A9E06AF0043ED08 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +88,8 @@
 				84AD3DFB2A9DDCFC0043ED08 /* SceneDelegate.swift */,
 				84AD3E1E2A9DE0910043ED08 /* AppGroup */,
 				84AD3E1F2A9DE1A10043ED08 /* GuideScreens */,
-				84AD3E1A2A9DE01B0043ED08 /* NetworkManager.swift */,
+				84AD3E272A9DEE8C0043ED08 /* Network */,
+				84AD3E2C2A9E06760043ED08 /* Extensions */,
 				84AD3DFF2A9DDCFC0043ED08 /* Main.storyboard */,
 				84AD3E052A9DDCFE0043ED08 /* Assets.xcassets */,
 				84AD3E072A9DDCFE0043ED08 /* LaunchScreen.storyboard */,
@@ -103,11 +114,39 @@
 			isa = PBXGroup;
 			children = (
 				84AD3DFD2A9DDCFC0043ED08 /* GuideListViewController.swift */,
-				84AD3E102A9DDE090043ED08 /* GuideDetailViewController.swift */,
+				84AD3E232A9DE5F50043ED08 /* GuideListCollectionViewCell.swift */,
 				84AD3E202A9DE1D00043ED08 /* GuideCoordinator.swift */,
 				84AD3E182A9DDFB80043ED08 /* GuideViewModel.swift */,
+				84AD3E222A9DE44F0043ED08 /* Detail */,
 			);
 			path = GuideScreens;
+			sourceTree = "<group>";
+		};
+		84AD3E222A9DE44F0043ED08 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				84AD3E102A9DDE090043ED08 /* GuideDetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		84AD3E272A9DEE8C0043ED08 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				84AD3E1A2A9DE01B0043ED08 /* NetworkManager.swift */,
+				84AD3E252A9DED6C0043ED08 /* NetworkModel.swift */,
+				84AD3E2A2A9E04420043ED08 /* Errors.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		84AD3E2C2A9E06760043ED08 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84AD3E282A9DF1160043ED08 /* UIimageView+Extension.swift */,
+				84AD3E2D2A9E06AF0043ED08 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,13 +224,18 @@
 				84AD3E042A9DDCFC0043ED08 /* GuideService.xcdatamodeld in Sources */,
 				84AD3E1B2A9DE01B0043ED08 /* NetworkManager.swift in Sources */,
 				84AD3E212A9DE1D00043ED08 /* GuideCoordinator.swift in Sources */,
+				84AD3E2E2A9E06AF0043ED08 /* UIViewController+Extension.swift in Sources */,
+				84AD3E2B2A9E04420043ED08 /* Errors.swift in Sources */,
 				84AD3E192A9DDFB80043ED08 /* GuideViewModel.swift in Sources */,
 				84AD3DFE2A9DDCFC0043ED08 /* GuideListViewController.swift in Sources */,
 				84AD3E112A9DDE090043ED08 /* GuideDetailViewController.swift in Sources */,
+				84AD3E242A9DE5F50043ED08 /* GuideListCollectionViewCell.swift in Sources */,
 				84AD3E1D2A9DE0810043ED08 /* Coordinatable.swift in Sources */,
 				84AD3DFA2A9DDCFC0043ED08 /* AppDelegate.swift in Sources */,
+				84AD3E292A9DF1160043ED08 /* UIimageView+Extension.swift in Sources */,
 				84AD3E172A9DDEFB0043ED08 /* Module.swift in Sources */,
 				84AD3E152A9DDE7B0043ED08 /* AppFactory.swift in Sources */,
+				84AD3E262A9DED6C0043ED08 /* NetworkModel.swift in Sources */,
 				84AD3DFC2A9DDCFC0043ED08 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
