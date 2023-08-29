@@ -9,23 +9,39 @@
 /* Begin PBXBuildFile section */
 		84AD3DFA2A9DDCFC0043ED08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3DF92A9DDCFC0043ED08 /* AppDelegate.swift */; };
 		84AD3DFC2A9DDCFC0043ED08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3DFB2A9DDCFC0043ED08 /* SceneDelegate.swift */; };
-		84AD3DFE2A9DDCFC0043ED08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3DFD2A9DDCFC0043ED08 /* ViewController.swift */; };
+		84AD3DFE2A9DDCFC0043ED08 /* GuideListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3DFD2A9DDCFC0043ED08 /* GuideListViewController.swift */; };
 		84AD3E012A9DDCFC0043ED08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AD3DFF2A9DDCFC0043ED08 /* Main.storyboard */; };
 		84AD3E042A9DDCFC0043ED08 /* GuideService.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E022A9DDCFC0043ED08 /* GuideService.xcdatamodeld */; };
 		84AD3E062A9DDCFE0043ED08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84AD3E052A9DDCFE0043ED08 /* Assets.xcassets */; };
 		84AD3E092A9DDCFE0043ED08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AD3E072A9DDCFE0043ED08 /* LaunchScreen.storyboard */; };
+		84AD3E112A9DDE090043ED08 /* GuideDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E102A9DDE090043ED08 /* GuideDetailViewController.swift */; };
+		84AD3E132A9DDE420043ED08 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E122A9DDE420043ED08 /* AppCoordinator.swift */; };
+		84AD3E152A9DDE7B0043ED08 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E142A9DDE7B0043ED08 /* AppFactory.swift */; };
+		84AD3E172A9DDEFB0043ED08 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E162A9DDEFB0043ED08 /* Module.swift */; };
+		84AD3E192A9DDFB80043ED08 /* GuideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E182A9DDFB80043ED08 /* GuideViewModel.swift */; };
+		84AD3E1B2A9DE01B0043ED08 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E1A2A9DE01B0043ED08 /* NetworkManager.swift */; };
+		84AD3E1D2A9DE0810043ED08 /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E1C2A9DE0810043ED08 /* Coordinatable.swift */; };
+		84AD3E212A9DE1D00043ED08 /* GuideCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3E202A9DE1D00043ED08 /* GuideCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84AD3DF62A9DDCFC0043ED08 /* GuideService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuideService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AD3DF92A9DDCFC0043ED08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84AD3DFB2A9DDCFC0043ED08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84AD3DFD2A9DDCFC0043ED08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84AD3DFD2A9DDCFC0043ED08 /* GuideListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideListViewController.swift; sourceTree = "<group>"; };
 		84AD3E002A9DDCFC0043ED08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84AD3E032A9DDCFC0043ED08 /* GuideService.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GuideService.xcdatamodel; sourceTree = "<group>"; };
 		84AD3E052A9DDCFE0043ED08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84AD3E082A9DDCFE0043ED08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84AD3E0A2A9DDCFE0043ED08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84AD3E102A9DDE090043ED08 /* GuideDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideDetailViewController.swift; sourceTree = "<group>"; };
+		84AD3E122A9DDE420043ED08 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		84AD3E142A9DDE7B0043ED08 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
+		84AD3E162A9DDEFB0043ED08 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		84AD3E182A9DDFB80043ED08 /* GuideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewModel.swift; sourceTree = "<group>"; };
+		84AD3E1A2A9DE01B0043ED08 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		84AD3E1C2A9DE0810043ED08 /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
+		84AD3E202A9DE1D00043ED08 /* GuideCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +76,9 @@
 			children = (
 				84AD3DF92A9DDCFC0043ED08 /* AppDelegate.swift */,
 				84AD3DFB2A9DDCFC0043ED08 /* SceneDelegate.swift */,
-				84AD3DFD2A9DDCFC0043ED08 /* ViewController.swift */,
+				84AD3E1E2A9DE0910043ED08 /* AppGroup */,
+				84AD3E1F2A9DE1A10043ED08 /* GuideScreens */,
+				84AD3E1A2A9DE01B0043ED08 /* NetworkManager.swift */,
 				84AD3DFF2A9DDCFC0043ED08 /* Main.storyboard */,
 				84AD3E052A9DDCFE0043ED08 /* Assets.xcassets */,
 				84AD3E072A9DDCFE0043ED08 /* LaunchScreen.storyboard */,
@@ -68,6 +86,28 @@
 				84AD3E022A9DDCFC0043ED08 /* GuideService.xcdatamodeld */,
 			);
 			path = GuideService;
+			sourceTree = "<group>";
+		};
+		84AD3E1E2A9DE0910043ED08 /* AppGroup */ = {
+			isa = PBXGroup;
+			children = (
+				84AD3E122A9DDE420043ED08 /* AppCoordinator.swift */,
+				84AD3E142A9DDE7B0043ED08 /* AppFactory.swift */,
+				84AD3E162A9DDEFB0043ED08 /* Module.swift */,
+				84AD3E1C2A9DE0810043ED08 /* Coordinatable.swift */,
+			);
+			path = AppGroup;
+			sourceTree = "<group>";
+		};
+		84AD3E1F2A9DE1A10043ED08 /* GuideScreens */ = {
+			isa = PBXGroup;
+			children = (
+				84AD3DFD2A9DDCFC0043ED08 /* GuideListViewController.swift */,
+				84AD3E102A9DDE090043ED08 /* GuideDetailViewController.swift */,
+				84AD3E202A9DE1D00043ED08 /* GuideCoordinator.swift */,
+				84AD3E182A9DDFB80043ED08 /* GuideViewModel.swift */,
+			);
+			path = GuideScreens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +181,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AD3E132A9DDE420043ED08 /* AppCoordinator.swift in Sources */,
 				84AD3E042A9DDCFC0043ED08 /* GuideService.xcdatamodeld in Sources */,
-				84AD3DFE2A9DDCFC0043ED08 /* ViewController.swift in Sources */,
+				84AD3E1B2A9DE01B0043ED08 /* NetworkManager.swift in Sources */,
+				84AD3E212A9DE1D00043ED08 /* GuideCoordinator.swift in Sources */,
+				84AD3E192A9DDFB80043ED08 /* GuideViewModel.swift in Sources */,
+				84AD3DFE2A9DDCFC0043ED08 /* GuideListViewController.swift in Sources */,
+				84AD3E112A9DDE090043ED08 /* GuideDetailViewController.swift in Sources */,
+				84AD3E1D2A9DE0810043ED08 /* Coordinatable.swift in Sources */,
 				84AD3DFA2A9DDCFC0043ED08 /* AppDelegate.swift in Sources */,
+				84AD3E172A9DDEFB0043ED08 /* Module.swift in Sources */,
+				84AD3E152A9DDE7B0043ED08 /* AppFactory.swift in Sources */,
 				84AD3DFC2A9DDCFC0043ED08 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +344,6 @@
 				INFOPLIST_FILE = GuideService/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +371,6 @@
 				INFOPLIST_FILE = GuideService/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
