@@ -5,20 +5,22 @@
 //  Created by Roman Vronsky on 29/08/23.
 //
 
+import UIKit
+
 protocol GuideViewModelProtocol: ViewModelProtocol {
     func getBrands(completion: @escaping (([Brands]?, NetworkError?) -> Void))
+    func openGuideDetail(brand: Brands, index: Int)
 }
 
 class GuideViewModel: GuideViewModelProtocol {
-
-//    private let coreDataManager: CoreDataManagerProtocol
+    
     private let networkManager: NetworkProtocol
     
     init(networkManager: NetworkProtocol) {
-//        self.coreDataManager = coreDataManager
         self.networkManager = networkManager
     }
-    weak var coordinator: Coordinatable!
+    
+    var coordinator: GuideCoordinator?
     
     func getBrands(completion: @escaping (([Brands]?, NetworkError?) -> Void)) {
         networkManager.getBrands { brands, error  in
@@ -28,5 +30,10 @@ class GuideViewModel: GuideViewModelProtocol {
             completion(brands, nil)
         }
     }
+    
+    func openGuideDetail(brand: Brands, index: Int) {
+        self.coordinator?.openGuideDetail(brand: brand, index: index)
+    }
+    
 }
 

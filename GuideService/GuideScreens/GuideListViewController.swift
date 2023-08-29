@@ -20,7 +20,8 @@ class GuideListViewController: UIViewController {
         fatalError()
     }
     
-    private var brands = [Brands]()
+    
+    private var index = 0
     
     private lazy var activityIndicator = UIActivityIndicatorView(style: .large)
     
@@ -59,12 +60,18 @@ class GuideListViewController: UIViewController {
                     }
                 }
                 guard let brands else {return}
-                self.brands = brands
+                brandsArray = brands
                 self.collectionView.reloadData()
             }
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.collectionView.reloadItems(at: [[0,index]])
+        print(index)
+    }
+
     private func setupView() {
         
         activityIndicator.color = .systemIndigo
@@ -98,12 +105,12 @@ class GuideListViewController: UIViewController {
 extension GuideListViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        brands.count
+        brandsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GuideListCollectionViewCell.identifier, for: indexPath) as! GuideListCollectionViewCell
-        let brand = self.brands[indexPath.row]
+        let brand = brandsArray[indexPath.row]
         cell.setup(brand, index: indexPath.row)
         cell.delegate = self
         return cell
@@ -117,21 +124,21 @@ extension GuideListViewController: UICollectionViewDelegateFlowLayout, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let brand = self.brands[indexPath.row]
-        
-        navigationController?.pushViewController(GuideDetailViewController(brand: brand), animated: true)
+        let brand = brandsArray[indexPath.row]
+        self.index = indexPath.row
+        print(index)
+        viewModel.openGuideDetail(brand: brand, index: indexPath.row)
     }
 }
 extension GuideListViewController: FavoriteDelegate {
     
     func favButtonDidTap(index: Int) {
-        let brand = self.brands.remove(at: index)
+        let brand = brandsArray[index]
         if brand.isLike ?? false {
             brand.isLike = false
         } else {
             brand.isLike = true
         }
-        self.brands.insert(brand, at: index)
         self.collectionView.reloadItems(at: [[0,index]])
     }
 }

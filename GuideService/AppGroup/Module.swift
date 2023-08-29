@@ -14,6 +14,7 @@ struct Module {
     enum ModuleType {
         case guide
     }
+    
     let moduleType: ModuleType
     let viewModel: ViewModelProtocol
     let view: UIViewController

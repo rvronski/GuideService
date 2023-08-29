@@ -9,8 +9,6 @@ import UIKit
 
 class AppFactory {
     
-    
-//    private let coreDataManager: CoreDataManagerProtocol
     private let networkManager: NetworkProtocol
     
     init(networkManager: NetworkProtocol) {

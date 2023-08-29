@@ -21,3 +21,5 @@ class Brands: Codable {
     var viewsCount: Int?
     var isLike: Bool?
 }
+
+var brandsArray = [Brands]()

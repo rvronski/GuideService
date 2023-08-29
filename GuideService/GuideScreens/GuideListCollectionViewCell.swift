@@ -58,7 +58,7 @@ class GuideListCollectionViewCell: UICollectionViewCell {
     
     func setup(_ model: Brands, index: Int) {
         nameLabel.text = model.title ?? ""
-        imageView.getImage(from: model.thumbUrls?.first ?? "")
+        imageView.setImage(model.thumbUrls?.first)
         self.index = index
         if model.isLike ?? false {
             favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)

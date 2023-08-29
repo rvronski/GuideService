@@ -26,5 +26,10 @@ class GuideCoordinator: ModuleCoordinatable {
         self.module = module
         return viewController
     }
+    
+    func openGuideDetail(brand: Brands, index: Int) {
+        let detailVC = GuideDetailViewController(brand: brand, index: index)
+        (module!.view as? UINavigationController)?.pushViewController(detailVC, animated: true)
+    }
 }
 
