@@ -7,9 +7,17 @@
 
 import UIKit
 
+protocol FavoriteDelegate {
+    func favButtonDidTap(index: Int)
+}
+
 class GuideListCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "guideCell" 
+    
+    private var index = 0
+    
+    var delegate: FavoriteDelegate?
     
     private lazy var nameLabel: UILabel = {
        let label = UILabel()
@@ -35,6 +43,7 @@ class GuideListCollectionViewCell: UICollectionViewCell {
         button.setImage(UIImage(systemName: "heart"), for: .normal)
         button.tintColor = .systemRed
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(tapFavButton), for: .touchUpInside)
         return button
     }()
     
@@ -47,8 +56,15 @@ class GuideListCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup(_ model: Brands) {
+    func setup(_ model: Brands, index: Int) {
         nameLabel.text = model.title ?? ""
+        imageView.getImage(from: model.thumbUrls?.first ?? "")
+        self.index = index
+        if model.isLike ?? false {
+            favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        } else {
+            favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
     }
     
     
@@ -74,5 +90,9 @@ class GuideListCollectionViewCell: UICollectionViewCell {
             favoriteButton.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -16),
         
         ])
+    }
+    
+   @objc private func tapFavButton() {
+       self.delegate?.favButtonDidTap(index: self.index)
     }
 }

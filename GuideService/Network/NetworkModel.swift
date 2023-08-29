@@ -19,4 +19,5 @@ class Brands: Codable {
     var slug: String?
     var type: String?
     var viewsCount: Int?
+    var isLike: Bool?
 }

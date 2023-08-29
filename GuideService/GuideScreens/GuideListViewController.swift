@@ -20,13 +20,7 @@ class GuideListViewController: UIViewController {
         fatalError()
     }
     
-    private var brands = [Brands]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
-    }
+    private var brands = [Brands]()
     
     private lazy var activityIndicator = UIActivityIndicatorView(style: .large)
     
@@ -66,6 +60,7 @@ class GuideListViewController: UIViewController {
                 }
                 guard let brands else {return}
                 self.brands = brands
+                self.collectionView.reloadData()
             }
         }
     }
@@ -108,8 +103,9 @@ extension GuideListViewController: UICollectionViewDelegateFlowLayout, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GuideListCollectionViewCell.identifier, for: indexPath) as! GuideListCollectionViewCell
-        cell.setup(brands[indexPath.row])
-        cell.imageView.downloadedFrom(link: brands[indexPath.row].thumbUrls?.first ?? "")
+        let brand = self.brands[indexPath.row]
+        cell.setup(brand, index: indexPath.row)
+        cell.delegate = self
         return cell
     }
     
@@ -119,6 +115,24 @@ extension GuideListViewController: UICollectionViewDelegateFlowLayout, UICollect
         let height = width * 0.8
         return CGSize(width: width, height: height)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let brand = self.brands[indexPath.row]
+        
+        navigationController?.pushViewController(GuideDetailViewController(brand: brand), animated: true)
+    }
 }
-
+extension GuideListViewController: FavoriteDelegate {
+    
+    func favButtonDidTap(index: Int) {
+        let brand = self.brands.remove(at: index)
+        if brand.isLike ?? false {
+            brand.isLike = false
+        } else {
+            brand.isLike = true
+        }
+        self.brands.insert(brand, at: index)
+        self.collectionView.reloadItems(at: [[0,index]])
+    }
+}
 

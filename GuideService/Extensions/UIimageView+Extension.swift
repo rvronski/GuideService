@@ -9,8 +9,8 @@ import UIKit
 
 extension UIImageView {
     
-    func downloadedFrom(link:String) {
-        guard let url = URL(string: link) else { return }
+    func getImage(from: String) async {
+        guard let url = URL(string: from) else { return }
         let indicator = UIActivityIndicatorView(style: .medium)
         indicator.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(indicator)
